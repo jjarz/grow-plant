@@ -50,6 +50,11 @@ class App extends Component {
     }
   }
 
+  getProgress = () => {
+    const progress = Math.round(this.state.points/POINTS.FULL_GROWN * 100)
+    return progress < 100 ? progress : 100
+  }
+
   render() {
     return (
       <div className="App">
@@ -80,7 +85,9 @@ class App extends Component {
             image={stateUtils.buttonImageUrls.love}
             />
 
-          <UserFeedback feedbackText={this.state.feedbackText} />
+          <UserFeedback
+            feedbackText={this.state.feedbackText}
+            progress={this.getProgress()}/>
           <div>
 
           </div>

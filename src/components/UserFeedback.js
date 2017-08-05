@@ -9,9 +9,12 @@ import React from 'react'
 *   - clean and easy to read/reason about
 *   - easy to test
 */
-const UserFeedback = ({feedbackText}) => {
+const UserFeedback = ({feedbackText, progress}) => {
     return (
       <div className='UserFeedback'>
+        <h4>
+          Progress: {progress}% grown
+        </h4>
         {feedbackText}
       </div>
     )
