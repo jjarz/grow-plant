@@ -11,8 +11,15 @@ class App extends Component {
 
     // initial state
     this.state = {
-      plantSize: stateUtils.plantSizes.seed
+      plantSize: 0
     }
+  }
+
+  // arrow function allow this function to use this w/o explicitly binding it
+  handleWaterClick = () => {
+    this.setState((prevState, props) => ({
+      plantSize: prevState.plantSize + 1
+    }))
   }
 
   render() {
@@ -23,10 +30,10 @@ class App extends Component {
         </div>
         <div className="App-body">
           {/* plant display */}
-          <Plant plantSize={stateUtils.plantSizes[0]}/>
+          <Plant plantSize={stateUtils.plantSizes[this.state.plantSize]}/>
 
           {/* control buttons */}
-          <ControlButton control={stateUtils.controls.water} />
+          <ControlButton control={stateUtils.controls.water} onClick={this.handleWaterClick}/>
           <ControlButton control={stateUtils.controls.light} />
           <ControlButton control={stateUtils.controls.love} />
 

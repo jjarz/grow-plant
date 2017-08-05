@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class ControlButton extends Component {
   render () {
     return (
-      <button>{this.props.control}</button>
+      <button onClick={this.props.onClick}>{this.props.control}</button>
     )
   }
 }
