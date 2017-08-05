@@ -58,12 +58,27 @@ class App extends Component {
         </div>
         <div className="App-body">
           {/* plant display */}
-          <Plant plantSize={stateUtils.plantSizes[this.state.plantSize]}/>
+          <Plant plantImage={stateUtils.plantImageUrls[this.state.plantSize]}/>
 
           {/* control buttons */}
-          <ControlButton control={stateUtils.controls.water} points={2} onClick={this.handlePlantGrowth} />
-          <ControlButton control={stateUtils.controls.light} points={4} onClick={this.handlePlantGrowth} />
-          <ControlButton control={stateUtils.controls.love} points={6} onClick={this.handlePlantGrowth} />
+          <ControlButton
+            control={stateUtils.controls.water}
+            points={2}
+            onClick={this.handlePlantGrowth}
+            image={stateUtils.buttonImageUrls.water}
+            />
+          <ControlButton
+            control={stateUtils.controls.light}
+            points={4}
+            onClick={this.handlePlantGrowth}
+            image={stateUtils.buttonImageUrls.light}
+            />
+          <ControlButton
+            control={stateUtils.controls.love}
+            points={6}
+            onClick={this.handlePlantGrowth}
+            image={stateUtils.buttonImageUrls.love}
+            />
 
           <UserFeedback feedbackText={this.state.feedbackText} />
           <div>

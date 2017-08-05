@@ -8,7 +8,12 @@ class ControlButton extends Component {
 
   render () {
     return (
-      <button onClick={this.handleClick}>{this.props.control}</button>
+      <button className='ControlButton-button'>
+        <img src={this.props.image}
+        alt={this.props.control}
+        onClick={this.handleClick}
+        className='ControlButton-image' />
+      </button>
     )
   }
 }

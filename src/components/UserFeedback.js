@@ -11,7 +11,7 @@ import React from 'react'
 */
 const UserFeedback = ({feedbackText}) => {
     return (
-      <div>
+      <div className='UserFeedback'>
         {feedbackText}
       </div>
     )
