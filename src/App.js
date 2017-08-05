@@ -23,7 +23,7 @@ class App extends Component {
         </div>
         <div className="App-body">
           {/* plant display */}
-          <Plant plantSize={this.state.plantSize}/>
+          <Plant plantSize={stateUtils.plantSizes[0]}/>
 
           {/* control buttons */}
           <ControlButton control={stateUtils.controls.water} />

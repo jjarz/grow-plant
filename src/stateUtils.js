@@ -1,10 +1,5 @@
 module.exports = {
-  plantSizes: {
-    seed: 'seed',
-    seedling: 'seedling',
-    small: 'small',
-    full_grown: 'full_grown'
-  },
+  plantSizes: ['seed', 'seedling', 'small', 'full_grown'],
   controls: {
     water: 'water',
     light: 'light',
