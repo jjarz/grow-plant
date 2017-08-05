@@ -32,7 +32,8 @@ class App extends Component {
 
     if (newPoints >= POINTS.FULL_GROWN) {
       this.setState(() => ({
-        plantSize: 3
+        plantSize: 3,
+        feedbackText: stateUtils.feedback.win
       }))
     } else if (newPoints >= POINTS.SMALL) {
       this.setState(() => {
@@ -64,8 +65,7 @@ class App extends Component {
           <ControlButton control={stateUtils.controls.light} points={4} onClick={this.handlePlantGrowth} />
           <ControlButton control={stateUtils.controls.love} points={6} onClick={this.handlePlantGrowth} />
 
-          <UserFeedback feedbackText={stateUtils.feedback.start} />
-          {this.state.points}
+          <UserFeedback feedbackText={this.state.feedbackText} />
           <div>
 
           </div>
