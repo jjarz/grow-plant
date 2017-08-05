@@ -6,7 +6,7 @@ import stateUtils from './stateUtils'
 import './App.css';
 
 const POINTS = {
-  SEEDLING: 5,
+  SEEDLING: 1,
   SMALL: 20,
   FULL_GROWN: 50
 }
