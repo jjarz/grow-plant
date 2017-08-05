@@ -6,6 +6,15 @@ import stateUtils from './stateUtils'
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props) // must call this since we are overriding Component's constructor
+
+    // initial state
+    this.state = {
+      plantSize: stateUtils.plantSizes.seed
+    }
+  }
+
   render() {
     return (
       <div className="App">
@@ -14,7 +23,7 @@ class App extends Component {
         </div>
         <div className="App-body">
           {/* plant display */}
-          <Plant plantSize={stateUtils.plantSizes.seed}/>
+          <Plant plantSize={this.state.plantSize}/>
 
           {/* control buttons */}
           <ControlButton control={stateUtils.controls.water} />
