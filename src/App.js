@@ -2,24 +2,8 @@ import React, { Component } from 'react';
 import Plant from './components/Plant'
 import ControlButton from './components/ControlButton'
 import UserFeedback from './components/UserFeedback'
+import stateUtils from './stateUtils'
 import './App.css';
-
-const plantSizes = {
-  seed: 'seed',
-  seedling: 'seedling',
-  small: 'small',
-  full_grown: 'full_grown'
-}
-
-const controls = {
-  water: 'water',
-  light: 'light',
-  love: 'love'
-}
-
-const feedback = {
-  start: 'Grow your plant by giving it the right combination of water, light and love <3'
-}
 
 class App extends Component {
   render() {
@@ -30,14 +14,14 @@ class App extends Component {
         </div>
         <div className="App-body">
           {/* plant display */}
-          <Plant plantSize={plantSizes.seed}/>
+          <Plant plantSize={stateUtils.plantSizes.seed}/>
 
           {/* control buttons */}
-          <ControlButton control={controls.water} />
-          <ControlButton control={controls.light} />
-          <ControlButton control={controls.love} />
+          <ControlButton control={stateUtils.controls.water} />
+          <ControlButton control={stateUtils.controls.light} />
+          <ControlButton control={stateUtils.controls.love} />
 
-          <UserFeedback feedbackText={feedback.start} />
+          <UserFeedback feedbackText={stateUtils.feedback.start} />
           <div>
 
           </div>
