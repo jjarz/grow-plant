@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Plant from './components/Plant'
 import ControlButton from './components/ControlButton'
+import UserFeedback from './components/UserFeedback'
 import './App.css';
 
 const plantSizes = {
@@ -14,6 +15,10 @@ const controls = {
   water: 'water',
   light: 'light',
   love: 'love'
+}
+
+const feedback = {
+  start: 'Grow your plant by giving it the right combination of water, light and love <3'
 }
 
 class App extends Component {
@@ -31,6 +36,8 @@ class App extends Component {
           <ControlButton control={controls.water} />
           <ControlButton control={controls.light} />
           <ControlButton control={controls.love} />
+
+          <UserFeedback feedbackText={feedback.start} />
           <div>
 
           </div>
