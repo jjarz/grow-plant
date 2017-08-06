@@ -1,6 +1,8 @@
 
 A small interactive game to grow a plant used to show React beginners how to get a simple app up and running.
 
+Slides from ACT-W https://docs.google.com/presentation/d/1dAUJfFEsDpE4eeYRsgMqpgPPu6sV3JIyw6UgLTXJEHs/edit?usp=sharing
+
 ## Getting Started
 _Note: this includes instructions for recreating your own version of this project.  For use as a demo at ACT-W 2017._
 
