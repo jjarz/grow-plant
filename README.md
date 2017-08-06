@@ -30,6 +30,22 @@ git push -u origin master
 
 ---
 
+## Additional Resources
+Facebook’s basic React tutorial
+https://facebook.github.io/react/tutorial/tutorial.html
+
+Breaking down mocks into components
+https://facebook.github.io/react/docs/thinking-in-react.html
+
+Comprehensive React Fundamentals course
+https://tylermcginnis.com/courses/react-fundamentals/
+* covers react-router, webpack & more. Hands-on, with videos and lessons 
+
+Redux explained by cartoons 
+https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
